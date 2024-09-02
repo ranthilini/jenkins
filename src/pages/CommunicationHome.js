@@ -19,7 +19,7 @@ function CommunicationHome() {
       <nav className="menu-links">
         <ul>
           <li><a href="#">Home916</a></li>
-          <li><a href="/feedbackui">Feedback</a></li>
+          <li><a href="/feedbackui">Feedback1</a></li>
           <li><a href="/requestt">Request</a></li>
           <li><a href="/replyt">IPFU Manager</a></li>
         </ul>

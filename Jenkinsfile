@@ -2,18 +2,18 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repository') {
-            steps {
-                // Checkout the Git repository
-                git branch: 'main', url:'https://github.com/ranthilini/jenkins.git'
-            }
-        }
+       stage('Clone Repository') {
+    steps {
+        git branch: 'main', url: 'https://github.com/ranthilini/Jenkinsnew.git'
+          }
+      }
+
 
         stage('Build Docker Image') {
             steps {
-                // Build the Docker image using the provided Dockerfile
+                // Build the Docker image
                 script {
-                    def app = docker.build("MYWEBSITE:latest")
+                    def app = docker.build("my_website4:latest")
                 }
             }
         }
@@ -29,7 +29,7 @@ pipeline {
                         echo "No container to stop"
                     }
                     // Run the new Docker container
-                    sh "docker run -d --name website_container -p 3000:3000 MYWEBSITE:latest"
+                    sh "docker run -d --name website_container -p 3000:3000 my_website4:latest"
                 }
             }
         }

@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Checkout the Git repository
-                git 'https://github.com/yourusername/your-repo.git'
+                git branch: 'main', url:'https://github.com/ranthilini/jenkins.git'
             }
         }
 
@@ -13,7 +13,7 @@ pipeline {
             steps {
                 // Build the Docker image using the provided Dockerfile
                 script {
-                    def app = docker.build("your-website:latest")
+                    def app = docker.build("MYWEBSITE:latest")
                 }
             }
         }
@@ -29,7 +29,7 @@ pipeline {
                         echo "No container to stop"
                     }
                     // Run the new Docker container
-                    sh "docker run -d --name website_container -p 3000:3000 your-website:latest"
+                    sh "docker run -d --name website_container -p 3000:3000 MYWEBSITE:latest"
                 }
             }
         }

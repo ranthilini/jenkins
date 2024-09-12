@@ -18,7 +18,7 @@ function CommunicationHome() {
 <h1 className="navbar-company-name" style={{ fontSize: "1.2rem", fontWeight: "bold",  marginright: "5px" ,color:'white'}}>I Paid For You</h1>
       <nav className="menu-links">
         <ul>
-          <li><a href="#">Homexs1c2</a></li>
+          <li><a href="#">Homexssss</a></li>
           <li><a href="/feedbackui">Feedback1</a></li>
           <li><a href="/requestt">Request</a></li>
           <li><a href="/replyt">IPFU Manager</a></li>
